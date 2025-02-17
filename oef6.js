@@ -10,9 +10,16 @@ const doIets2 = (text, callback) => callback(text.toUpperCase());
 doIets2("Hallo wereld", (resultaat) => console.log(resultaat));
 
 // oef22
-const greet2 = (name, callback) => callback(`Hallo, ${name}!`);
-// Verwacht resultaat: "Hallo, Sam!"
-greet2("Sam", (message) => console.log(message));
+const processArray = (arr, callback) => {
+  // Vul de functie in
+};
+for (let i = 0; i < arr.length; i++) {
+  arr[i] = callback(arr[i]);
+}
+// Verwacht resultaat: [2, 4, 6, 8, 10]
+processArray([1, 2, 3, 4, 5], function (num) {
+  return num * 2;
+});
 
 // oef32
 const doubleNumber2 = (num, callback) => callback(num * 2);
